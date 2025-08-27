@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist E-commerce Excel Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .download-btn {
+            background: white;
+            color: #333;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9ff;
+        }
+        
+        tr:hover {
+            background-color: #e8f0ff;
+            transition: all 0.3s ease;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        
+        .etape-header {
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+        
+        .instructions {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .preview-text {
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Checklist E-commerce</h1>
+        
+        <div class="download-section">
+            <h2>📊 Télécharger le fichier Excel</h2>
+            <p>Cliquez sur le bouton ci-dessous pour télécharger votre checklist au format Excel</p>
+            <button class="download-btn" onclick="downloadExcel()">
+                📥 Télécharger Excel (.xlsx)
+            </button>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Instructions d'utilisation :</h3>
+            <ul>
+                <li>Utilisez la colonne "Fait" pour cocher les tâches accomplies</li>
+                <li>Suivez les étapes dans l'ordre pour maximiser vos chances de succès</li>
+                <li>Cliquez sur les liens pour accéder aux outils recommandés</li>
+                <li>Sauvegardez régulièrement votre progression</li>
+            </ul>
+        </div>
+
+        <table id="checklistTable">
+            <thead>
+                <tr>
+                    <th style="width: 5%">Fait</th>
+                    <th style="width: 25%">Étape</th>
+                    <th style="width: 50%">Tâche</th>
+                    <th style="width: 20%">Liens utiles</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Le contenu sera généré par JavaScript -->
+            </tbody>
+        </table>
+        
+        <div class="preview-text">
+            <p><strong>Aperçu des données :</strong> Ce tableau contient toutes les étapes essentielles pour lancer votre boutique e-commerce avec succès.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        const checklistData = [
+            // Étape 1
+            { etape: "Étape 1 : Trouver un produit gagnant", tache: "Chercher sur TikTok les #suivants", liens: "#tiktokademebuyit #amazonfinds #tiktokshop #tiktokshopfinds #tiktokshopdeals #tiktokfinds", fait: false },
+            { etape: "", tache: "Produit wow effect (impressionne, visuellement attractif)", liens: "", fait: false },
+            { etape: "", tache: "Produit innovant, nouveau sur le marché, viral, tendance", liens: "", fait: false },
+            { etape: "", tache: "Résout un problème", liens: "", fait: false },
+            { etape: "", tache: "Présente un avant/après", liens: "", fait: false },
+            { etape: "", tache: "Prix de vente entre 20 et 60€", liens: "", fait: false },
+            { etape: "", tache: "Produit compact et léger (pour éviter des frais livraisons €€€)", liens: "", fait: false },
+            { etape: "", tache: "Voir les visiteurs mensuels d'un site", liens: "SimilarWeb", fait: false },
+            { etape: "", tache: "Choisir un produit populaire aux États-Unis à vendre en France", liens: "", fait: false },
+            
+            // Étape 2
+            { etape: "2. Choisir le nom de votre marque et son logo", tache: "Trouver un nom pour la boutique avec Namelix ou ChatGPT", liens: "Namelix & ChatGPT", fait: false },
+            { etape: "", tache: "Vérifier que le nom de domaine soit disponible", liens: "GoDaddy", fait: false },
+            { etape: "", tache: "Créer un logo simple avec une police d'écriture minimaliste", liens: "Canva & Looka", fait: false },
+            
+            // Étape 3
+            { etape: "3. Paramétrage de base de sa boutique en ligne", tache: "Créer sa boutique en ligne avec Shopify pour 1€", liens: "SHOPIFY (gratuit pendant 3 jours puis 1€/mois pendant 3 mois)", fait: false },
+            { etape: "", tache: "Importer son produit avec Auto-DS pour 1€", liens: "AUTODS (Période d'essai de 30 jours pour 1€)", fait: false },
+            { etape: "", tache: "Créer sa micro-entreprise avec LegalPlace", liens: "LegalPlace (Code THEORITZY pour 15% de réduction)", fait: false },
+            
+            // Étape 4
+            { etape: "4. Paramétrage de sa page produit", tache: "Créer sa page produit", liens: "", fait: false },
+            { etape: "", tache: "Ajouter une barre d'annonce (ex: \"Livraison Gratuite en France\")", liens: "", fait: false },
+            { etape: "", tache: "Insérer une image principale attrayante avec un titre accrocheur", liens: "", fait: false },
+            { etape: "", tache: "Inclure des preuves sociales (avis clients, logos, mentions presse)", liens: "", fait: false },
+            { etape: "", tache: "Ajouter une description concise en 3-4 lignes + bullet points", liens: "", fait: false },
+            { etape: "", tache: "Mettre en avant 3 arguments/bénéfices clés (image + explication)", liens: "", fait: false },
+            { etape: "", tache: "Ajouter une FAQ et les promesses de la marque (satisfait ou remboursé, service client)", liens: "", fait: false },
+            { etape: "", tache: "Finaliser avec une section \"newsletter\" et un pied de page légal", liens: "", fait: false },
+            
+            // Étape 5
+            { etape: "5. Créer du contenu marketing", tache: "Commander un exemplaire du produit sur Amazon", liens: "", fait: false },
+            { etape: "", tache: "Créer du contenu organique pour TikTok, Instagram et YouTube Shorts", liens: "", fait: false },
+            { etape: "", tache: "Poster régulièrement (2-3 fois par jour)", liens: "", fait: false },
+            { etape: "", tache: "Interagir avec votre audience (commentaires, questions)", liens: "", fait: false },
+            { etape: "", tache: "Expérimenter des plateformes IA UGC", liens: "Commerce Pro", fait: false },
+            
+            // Étape 6
+            { etape: "6. Sponsoriser les contenus qui fonctionnent", tache: "Identifier une vidéo organique performante et l'utiliser pour des publicités payantes", liens: "", fait: false },
+            { etape: "", tache: "Respecter la structure des vidéos publicitaire réussies", liens: "", fait: false },
+            { etape: "", tache: "Hook : capter l'attention en 3-4 secondes", liens: "", fait: false },
+            { etape: "", tache: "Contenu principal : dynamique, utile et engageant", liens: "", fait: false },
+            { etape: "", tache: "Call-to-Action : inviter à visiter votre site et acheter", liens: "", fait: false },
+            { etape: "", tache: "Créer un compte Tik Tok Ads", liens: "TikTok Ads", fait: false },
+            { etape: "", tache: "Lancer une campagne de testing avec les 3 meilleures contenus", liens: "", fait: false },
+            
+            // Étape 7
+            { etape: "7. EXTRA SUPER IMPORTANT!!", tache: "S'abonner à Medka sur YouTube", liens: "S'abonner à YouTube", fait: false },
+            { etape: "", tache: "S'abonner à Medka sur Instagram", liens: "S'abonner à Instagram", fait: false },
+            { etape: "", tache: "S'abonner à Medka sur TikTok", liens: "S'abonner à TikTok", fait: false }
+        ];
+
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            checklistData.forEach((item, index) => {
+                const row = document.createElement('tr');
+                const isEtapeHeader = item.etape.trim() !== '';
+                
+                if (isEtapeHeader) {
+                    row.classList.add('etape-header');
+                }
+                
+                row.innerHTML = `
+                    <td><input type="checkbox" class="checkbox" ${item.fait ? 'checked' : ''} onchange="toggleTask(${index})"></td>
+                    <td style="${isEtapeHeader ? 'font-weight: bold;' : ''}">${item.etape}</td>
+                    <td>${item.tache}</td>
+                    <td>${item.liens ? `<span class="link">${item.liens}</span>` : ''}</td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        }
+
+        function toggleTask(index) {
+            checklistData[index].fait = !checklistData[index].fait;
+        }
+
+        function downloadExcel() {
+            // Préparer les données pour Excel
+            const excelData = [
+                ['Fait', 'Étape', 'Tâche', 'Liens utiles']
+            ];
+            
+            checklistData.forEach(item => {
+                excelData.push([
+                    item.fait ? '✓' : '☐',
+                    item.etape,
+                    item.tache,
+                    item.liens
+                ]);
+            });
+            
+            // Créer le workbook
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet(excelData);
+            
+            // Ajuster la largeur des colonnes
+            ws['!cols'] = [
+                { width: 8 },   // Fait
+                { width: 40 },  // Étape
+                { width: 60 },  // Tâche
+                { width: 30 }   // Liens
+            ];
+            
+            // Ajouter la feuille au workbook
+            XLSX.utils.book_append_sheet(wb, ws, 'Checklist E-commerce');
+            
+            // Télécharger le fichier
+            XLSX.writeFile(wb, 'Checklist_E-commerce_2025.xlsx');
+        }
+
+        // Initialiser la table au chargement
+        renderTable();
+    </script>
+</body>
+</html>
