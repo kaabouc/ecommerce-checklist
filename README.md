@@ -1,9 +1,9 @@
 # 🚀 Checklist E-commerce Complète 2025 - Guide Dropshipping & Boutique en Ligne
 
-[![GitHub stars](https://img.shields.io/github/stars/username/ecommerce-checklist-2025?style=social)](https://github.com/username/ecommerce-checklist-2025)
+[![GitHub stars](https://img.shields.io/github/stars/kaabouc/ecommerce-checklist?style=social)](https://github.com/kaabouc/ecommerce-checklist)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/username/ecommerce-checklist-2025)
-[![Excel Download](https://img.shields.io/badge/Excel-Download-green.svg)](https://github.com/username/ecommerce-checklist-2025/releases)
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/kaabouc/ecommerce-checklist)
+[![Excel Download](https://img.shields.io/badge/Excel-Download-green.svg)](https://github.com/kaabouc/ecommerce-checklist/releases)
 
 > **La checklist la plus complète pour lancer votre boutique e-commerce en 2025** 📊  
 > Guide étape par étape pour créer un business en ligne rentable avec Shopify, TikTok et les stratégies de dropshipping moderne.
@@ -54,10 +54,10 @@ Cette **checklist e-commerce 2025** est un guide complet pour créer, lancer et 
 ### Installation
 ```bash
 # Cloner le repository
-git clone https://github.com/username/ecommerce-checklist-2025.git
+git clone https://github.com/kaabouc/ecommerce-checklist.git
 
 # Naviguer dans le dossier
-cd ecommerce-checklist-2025
+cd ecommerce-checklist
 
 # Ouvrir le générateur Excel
 open index.html
@@ -217,10 +217,10 @@ const hashtags = [
 
 ```bash
 # Téléchargement direct Excel
-wget https://github.com/username/ecommerce-checklist-2025/raw/main/checklist.xlsx
+wget https://github.com/kaabouc/ecommerce-checklist/raw/main/checklist.xlsx
 
 # Clone complet du projet
-git clone https://github.com/username/ecommerce-checklist-2025.git
+git clone https://github.com/kaabouc/ecommerce-checklist.git
 ```
 
 ## 🤝 Contribution
@@ -244,14 +244,14 @@ Contribuez à améliorer cette checklist !
 
 ## 📞 Support & Contact
 
-- 🐛 **Issues** : [GitHub Issues](https://github.com/username/ecommerce-checklist-2025/issues)
-- 💬 **Discussions** : [GitHub Discussions](https://github.com/username/ecommerce-checklist-2025/discussions)
+- 🐛 **Issues** : [GitHub Issues](https://github.com/kaabouc/ecommerce-checklist/issues)
+- 💬 **Discussions** : [GitHub Discussions](https://github.com/kaabouc/ecommerce-checklist/discussions)
 - 📧 **Email** : support@ecommerce-checklist.com
 - 🌐 **Website** : [www.ecommerce-checklist.com](https://ecommerce-checklist.com)
 
 ## 📈 Statistiques Projet
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=username&repo=ecommerce-checklist-2025&show_icons=true&theme=gradient)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?kaabouc=kaabouc&repo=ecommerce-checklist&show_icons=true&theme=gradient)
 
 ## 🏆 Témoignages
 
@@ -284,8 +284,8 @@ Ce projet est sous licence **MIT** - voir [LICENSE.md](LICENSE.md) pour plus de 
 
 📢 **Partagez avec vos amis entrepreneurs :**
 
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fusername%2Fecommerce-checklist-2025)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20e-commerce%20checklist!&url=https://github.com/username/ecommerce-checklist-2025)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Share-blue?style=social&logo=linkedin)](https://linkedin.com/sharing/share-offsite/?url=https://github.com/username/ecommerce-checklist-2025)
-[![Facebook](https://img.shields.io/badge/Facebook-Share-blue?style=social&logo=facebook)](https://facebook.com/sharer/sharer.php?u=https://github.com/username/ecommerce-checklist-2025)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fkaabouc%2Fecommerce-checklist)](https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20e-commerce%20checklist!&url=https://github.com/kaabouc/ecommerce-checklist)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Share-blue?style=social&logo=linkedin)](https://linkedin.com/sharing/share-offsite/?url=https://github.com/kaabouc/ecommerce-checklist)
+[![Facebook](https://img.shields.io/badge/Facebook-Share-blue?style=social&logo=facebook)](https://facebook.com/sharer/sharer.php?u=https://github.com/kaabouc/ecommerce-checklist)
 
 **Made with ❤️ for the E-commerce Community** 🚀
